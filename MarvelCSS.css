@@ -1,0 +1,268 @@
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the body scrollable */
+body {
+    width: 100vw; 
+    min-height: 200vh; 
+    position: relative;
+    overflow-y: auto; 
+    padding-top: 50px;
+}
+
+/* Heading Image */
+#head {
+    position: fixed; 
+    top: 300px;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 50vw; /* Fixed height (your original had "180x", which seems to be a typo) */
+    z-index: 2; 
+    text-align: center; /* If it's a text heading, this centers the text */
+}
+
+
+/* Background Image */
+#back {
+    position: absolute;
+    top: 210px; 
+    left: 0;
+    width: 100vw;
+    height: calc(100% + 50px); 
+    object-fit: cover;
+    z-index: -1; 
+}
+/* banner */
+/* Banner Video */
+#ban {
+    position: absolute;
+    top: 0px; /* Sticks to the top */
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 180px; /* Same height as before */
+    object-fit: cover; /* Makes sure video covers the area */
+    z-index: 1; /* Behind heading but above background */
+    pointer-events: none; /* Prevents user interaction */
+}
+
+/* news hyperlink */
+/* news hyperlink */
+#news {
+    position: absolute;
+    top: 79vh;
+    left: 22vw;
+    transform: translateY(-50%);
+    font-size: 2vw;
+    color: rgb(244, 241, 241);
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#news:hover {
+    color: #f9fbfb;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+
+/* movies hyperlink*/
+#movies {
+    position: absolute;
+    top: 79vh; /* Adjusts with screen height */
+    left: 31vw; /* Adjusts with screen width */
+    transform: translateY(-50%);
+    font-size: 2vw; /* Scales with screen size */
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#movies:hover {
+    color: #f2f9f9;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+#comics{
+    position: absolute;
+    top: 79vh; /* Adjusts with screen height */
+   right: 32vw; /* Adjusts with screen width */
+    transform: translateY(-50%);
+    font-size: 2vw; /* Scales with screen size */
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+#comics:hover {
+    color: #f2f9f9;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#character{
+    position: absolute;
+    top: 79vh; /* Adjusts with screen height */
+    right: 44vw; /* Adjusts with screen width */
+    transform: translateY(-50%);
+    font-size: 2vw; /* Scales with screen size */
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+#character:hover {
+    color: #f2f9f9;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#games{
+    position: absolute;
+    top: 79vh; /* Adjusts with screen height */
+   right: 21vw; /* Adjusts with screen width */
+    transform: translateY(-50%);
+    font-size: 2vw; /* Scales with screen size */
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+}
+#games:hover {
+    color: #f2f9f9;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* menu */
+#menu {
+    position: absolute;
+    top: 79vh; /* Adjusts with screen height */
+    left: 2vw; /* Adjusts with screen width */
+    transform: translateY(-50%);
+    font-size: 3vw; /* Scales with screen size */
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+/* Hover effect */
+#menu:hover {
+    color: #f2f9f9;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+#search {
+    position: absolute;
+    top: 79vh; /* Adjusts with screen height */
+    right: 2vw; /* Adjusts with screen width */
+    transform: translateY(-50%);
+    font-size: 3vw; /* Scales with screen size */
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;     
+}
+
+#search:hover {
+    color: #f2f9f9;
+    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
+    transform: translateY(-50%) scale(1.1);
+}
+/* Marvel Footer */
+.marvel-menu {
+    background-color: white;
+    color: #000;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 7200px;
+    margin: auto;
+}
+
+.menu-column {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.menu-column a {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 80px;
+}
+
+.menu-column a:hover {
+    color: crimson;
+}
+
+.menu-column.unlimited img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+
+.menu-column.unlimited p {
+    font-size: 100px;
+}
+
+.menu-column.social .social-icons {
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin-top: 70px;
+}
+
+.menu-column.social .social-icons i {
+    font-size: 80px;
+    color: #000;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.menu-column.social .social-icons i:hover {
+    color: crimson;
+}
+/* Header Styling */
+header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Footer Styling */
+footer {
+    position:absolute ;
+    width: 100vw;
+    min-height: 0vh; /* Makes the footer visibly larger */
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 80px 60px;
+    font-family: 'Montserrat', sans-serif;
+}
