@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <script src="script.js"></script>
+    <script src="Backgroundaudio.js"></script>
 
     
 
@@ -17,9 +17,11 @@
 <header>
     <img src="Marvel.jpg" alt="HEADING" id="head">
     <!-- <img src="marvel.jpg" alt="marvel" id="back"> -->
-    <video autoplay loop muted playsinline id="ban">
-        <source src="clip.mp4" type="video/mp4">
-    </video>
+     
+
+    <audio id="bg-audio" src="marvel_intro.mp3" preload="auto" style="display: none;"></audio>
+
+
 
     
         <a href="https://search.brave.com/news?q=marvel%20news" id="news"><b>NEWS</b></a>
@@ -29,10 +31,35 @@
         <a href="https://en.wikipedia.org/wiki/Marvel_Games" id="games"><b>GAMES</b></a>
     
 
-    <i class="fa-solid fa-bars" id="menu"></i>
+    <button id="play-audio-btn"><i class="fa-regular fa-circle-play"></i></button>
     <i class="fa-solid fa-magnifying-glass" id="search"></i>
     </header>
-    
+    <section class="scrolling-news-section">
+  <h2>Latest Marvel News</h2>
+  <div class="scrolling-news-container">
+    <div class="news-card">
+      <img src="/Deadpool3.jpg" alt="News 1">
+      <p>Deadpool 3 Official Trailer Released!</p>
+    </div>
+    <div class="news-card">
+      <img src="/Fantastic.jpeg" alt="News 2">
+      <p>Fantastic Four Cast Announced</p>
+    </div>
+    <div class="news-card">
+      <img src="/secret.jpeg" alt="News 3">
+      <p>Secret Wars: What to Expect</p>
+    </div>
+    <div class="news-card">
+      <img src="/iron.jpg" alt="News 4">
+      <p>Ironheart Series First Look</p>
+    </div>
+    <div class="news-card">
+      <img src="/Brand.jpg" alt="News 5"> 
+      <p>Spider Brand New Day</p> 
+    </div>
+       
+</section>
+
     <footer>
 
 <div class="marvel-menu">
