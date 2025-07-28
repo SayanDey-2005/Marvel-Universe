@@ -21,14 +21,35 @@ body {
 
 /* Heading Image */
 #head {
-    position: fixed; 
-    top: 300px;
-    left: 0;
-    width: 100vw; /* Full width */
-    height: 50vw; /* Fixed height (your original had "180x", which seems to be a typo) */
-    z-index: 2; 
-    text-align: center; /* If it's a text heading, this centers the text */
+    position: relative; /* or static */
+    top: 0; /* remove if unnecessary */
+    width: 105vw;
+    height: auto; /* better for responsiveness */
+    z-index: 42;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
+#play-audio-btn {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    background: crimson;
+    color: white;
+    font-size: 2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#play-audio-btn:hover {
+    background: darkred;
+}
+
 
 
 /* Background Image */
@@ -44,18 +65,16 @@ body {
 /* banner */
 /* Banner Video */
 #ban {
-    position: absolute;
+    position: fixed;
     top: 0px; /* Sticks to the top */
     left: 0;
-    width: 100vw; /* Full width */
+    width: 90vw; /* Full width */
     height: 180px; /* Same height as before */
     object-fit: cover; /* Makes sure video covers the area */
     z-index: 1; /* Behind heading but above background */
     pointer-events: none; /* Prevents user interaction */
 }
 
-/* news hyperlink */
-/* news hyperlink */
 #news {
     position: absolute;
     top: 79vh;
@@ -150,23 +169,28 @@ body {
 }
 
 /* menu */
-#menu {
+#play-audio-btn {
     position: absolute;
-    top: 79vh; /* Adjusts with screen height */
-    left: 2vw; /* Adjusts with screen width */
-    transform: translateY(-50%);
-    font-size: 3vw; /* Scales with screen size */
-    color: whitesmoke;
-    text-decoration: none;
+    top: 78%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    background: transparent; /* remove red */
+    color: rgb(250, 247, 247);
+    font-size: 15rem;
+    padding: 15px 30px;
+    border: 2px solid pwhite;
+    
+    cursor: pointer;
     z-index: 1000;
     transition: all 0.3s ease;
 }
-/* Hover effect */
-#menu:hover {
-    color: #f2f9f9;
-    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
-    transform: translateY(-50%) scale(1.1);
+
+#play-audio-btn:hover {
+    background: rgb(247, 244, 244);
+    color: rgb(15, 1, 1);
 }
+
+
 #search {
     position: absolute;
     top: 79vh; /* Adjusts with screen height */
@@ -254,7 +278,65 @@ header {
     height: 100vh;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
+    
 }
+/* ========== Scrollable News Section ========== */
+.scrolling-news-section {
+    background: rgb(18, 9, 9); /* ✅ white background between cards */
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.scrolling-news-section h2 {
+    font-size: 6.5rem;
+    margin-bottom:30px;
+    text-align: center;
+    color: #a13639;
+}
+
+.scrolling-news-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 40px; /* ✅ space between each card */
+    scroll-snap-type: x mandatory;
+    padding: 133px;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.news-card {
+    flex: 0 0 auto;
+    width: 950px; /* ✅ consistent width */
+    background: #1e1e1e;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news-card p {
+    font-size: 3.6rem;
+    color: #fff;
+}
+
+
+
+
 
 /* Footer Styling */
 footer {
