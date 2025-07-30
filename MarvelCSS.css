@@ -348,3 +348,81 @@ footer {
     padding: 80px 60px;
     font-family: 'Montserrat', sans-serif;
 }
+@media (max-width: 768px) {
+  /* Shrink large text and boxes for small screens */
+  .news-card {
+    width: 90vw;
+    padding: 20px;
+  }
+
+  .news-card p {
+    font-size: 1.5rem;
+  }
+
+  .scrolling-news-section h2 {
+    font-size: 2rem;
+  }
+
+  .menu-column a,
+  .menu-column p {
+    font-size: 1.5rem;
+  }
+
+  .menu-column.unlimited img {
+    width: 100px;
+  }
+
+  .menu-column.social .social-icons i {
+    font-size: 2rem;
+    gap: 20px;
+  }
+
+  #news, #movies, #comics, #character, #games, #search {
+    font-size: 1rem;
+    top: auto;
+    bottom: 30px;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  #play-audio-btn {
+    font-size: 2rem;
+    padding: 10px 20px;
+    left: 50%;
+    top: auto;
+    transform: translate(-50%, 0);
+    position: relative;
+    margin: 10px auto;
+  }
+
+  #ban {
+    width: 100vw;
+    height: 120px;
+  }
+
+  #back {
+    height: auto;
+  }
+
+  .scrolling-news-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  .menu-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-column {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
