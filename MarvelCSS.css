@@ -17,18 +17,20 @@ body {
     position: relative;
     overflow-y: auto; 
     padding-top: 50px;
+    
 }
 
 /* Heading Image */
 #head {
     position: relative; /* or static */
-    top: 0; /* remove if unnecessary */
-    width: 105vw;
-    height: auto; /* better for responsiveness */
+    top: 0vw;
+    width: 100vw; /* Full width */
+    height: 48vw; 
     z-index: 42;
     display: block;
-    margin: 0 auto;
+    margin: 0  px;
     text-align: center;
+    
 }
 #play-audio-btn {
     position: absolute;
@@ -61,6 +63,7 @@ body {
     height: calc(100% + 50px); 
     object-fit: cover;
     z-index: -1; 
+   
 }
 /* banner */
 /* Banner Video */
@@ -72,35 +75,14 @@ body {
     height: 180px; /* Same height as before */
     object-fit: cover; /* Makes sure video covers the area */
     z-index: 1; /* Behind heading but above background */
-    pointer-events: none; /* Prevents user interaction */
+    pointer-events: none;
+     /* Prevents user interaction */
 }
-
-#news {
-    position: absolute;
-    top: 79vh;
-    left: 22vw;
-    transform: translateY(-50%);
-    font-size: 2vw;
-    color: rgb(244, 241, 241);
-    text-decoration: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-#news:hover {
-    color: #f9fbfb;
-    text-shadow: 0 0 10px #f3fcfc, 0 0 20px #e7eded;
-    transform: translateY(-50%) scale(1.1);
-}
-
-
-
 /* movies hyperlink*/
 #movies {
     position: absolute;
     top: 79vh; /* Adjusts with screen height */
-    left: 31vw; /* Adjusts with screen width */
+    left: 25vw; /* Adjusts with screen width */
     transform: translateY(-50%);
     font-size: 2vw; /* Scales with screen size */
     color: whitesmoke;
@@ -119,7 +101,7 @@ body {
 #comics{
     position: absolute;
     top: 79vh; /* Adjusts with screen height */
-   right: 32vw; /* Adjusts with screen width */
+    left: 38vw; /* Adjusts with screen width */
     transform: translateY(-50%);
     font-size: 2vw; /* Scales with screen size */
     color: whitesmoke;
@@ -136,7 +118,7 @@ body {
 #character{
     position: absolute;
     top: 79vh; /* Adjusts with screen height */
-    right: 44vw; /* Adjusts with screen width */
+    left: 50vw; /* Adjusts with screen width */
     transform: translateY(-50%);
     font-size: 2vw; /* Scales with screen size */
     color: whitesmoke;
@@ -153,7 +135,7 @@ body {
 #games{
     position: absolute;
     top: 79vh; /* Adjusts with screen height */
-   right: 21vw; /* Adjusts with screen width */
+    left: 66vw; /* Adjusts with screen width */
     transform: translateY(-50%);
     font-size: 2vw; /* Scales with screen size */
     color: whitesmoke;
@@ -176,8 +158,8 @@ body {
     transform: translate(-50%, -50%);
     background: transparent; /* remove red */
     color: rgb(250, 247, 247);
-    font-size: 15rem;
-    padding: 15px 30px;
+    font-size: 19rem;
+    padding: 15px 20px;
     border: 2px solid pwhite;
     
     cursor: pointer;
@@ -187,7 +169,7 @@ body {
 
 #play-audio-btn:hover {
     background: rgb(247, 244, 244);
-    color: rgb(15, 1, 1);
+    color: rgb(220, 201, 201);
 }
 
 
@@ -229,6 +211,22 @@ body {
     margin: 10px;
 }
 
+.custom-line  {
+  
+  background-color: rgb(175, 169, 172);  /* Line color */
+  width: 0%; /* Adjust width as needed */
+  height: 0px;
+  margin: 8px auto;
+}
+
+@media (max-width: 400px){
+    .custom-line  {
+        border: none;
+        height: 1px;
+        width: 80%;
+        margin: 20px auto;
+    }   
+}
 .menu-column a {
     display: block;
     color: #000;
@@ -237,6 +235,7 @@ body {
     margin: 10px 0;
     font-size: 80px;
 }
+
 
 .menu-column a:hover {
     color: crimson;
@@ -252,6 +251,12 @@ body {
 .menu-column.unlimited p {
     font-size: 100px;
 }
+@media (max-width: 400px) {
+    .menu-column.unlimited p {
+    font-size: 1.5rem;
+}
+}
+
 
 .menu-column.social .social-icons {
     
@@ -271,6 +276,19 @@ body {
 .menu-column.social .social-icons i:hover {
     color: crimson;
 }
+
+.menu-text{
+    font-size: 60px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0;
+}
+@media (max-width: 400px) {
+    .menu-text {
+        font-size: 1.2rem;
+    }
+}
 /* Header Styling */
 header {
     position: relative;
@@ -282,23 +300,37 @@ header {
 }
 /* ========== Scrollable News Section ========== */
 .scrolling-news-section {
-    background: rgb(18, 9, 9); /* ✅ white background between cards */
+    background: rgb(18, 9, 9); 
     padding: 40px 20px;
     font-family: 'Montserrat', sans-serif;
 }
-
 
 .scrolling-news-section h2 {
     font-size: 6.5rem;
     margin-bottom:30px;
     text-align: center;
-    color: #a13639;
+    color: #a69fa0;
+}
+
+.news-line{
+    background-color: rgb(175, 169, 172);  /* Line color */
+    width: 40%; /* Adjust width as needed */
+    height: 0px;
+    margin: 8px auto;
+}
+@media (max-width: 400px) {
+    .news-line {
+        border: none;
+        height: 1px;
+        width: 80%;
+        margin: 20px auto;
+    }   
 }
 
 .scrolling-news-container {
     display: flex;
     overflow-x: auto;
-    gap: 40px; /* ✅ space between each card */
+    gap: 40px; 
     scroll-snap-type: x mandatory;
     padding: 133px;
     scrollbar-width: thin;
@@ -307,11 +339,11 @@ header {
 
 .news-card {
     flex: 0 0 auto;
-    width: 950px; /* ✅ consistent width */
-    background: #1e1e1e;
+    width: 980px; /* ✅ consistent width */
+    background: #232323 ;
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(244, 239, 239, 0.1) ;
     scroll-snap-align: start;
     transition: transform 0.3s ease;
     text-align: center;
@@ -334,95 +366,114 @@ header {
     color: #fff;
 }
 
-
-
-
-
 /* Footer Styling */
 footer {
     position:absolute ;
     width: 100vw;
     min-height: 0vh; /* Makes the footer visibly larger */
-    background-color: #f0f0f0;
+    background-color: #f7f0f0;
     color: #000;
     padding: 80px 60px;
     font-family: 'Montserrat', sans-serif;
 }
-@media (max-width: 768px) {
-  /* Shrink large text and boxes for small screens */
-  .news-card {
-    width: 90vw;
-    padding: 20px;
-  }
+/* Footer Styling for mobile view*/
+   @media (max-width: 400px) {
+    footer {
+        position: relative; /* Use relative instead of absolute for better flow */
+        width: 100vw; /* Full screen width */
+        padding: 40px 20px; /* Reduce padding for smaller screen */
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f7f0f0;
+        color: #000;
+        text-align: center; /* Optional: center-align footer content */
+    }
 
-  .news-card p {
+    .menu-column {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu-column a {
+        font-size: 1.4rem;
+    }
+
+    .menu-column p {
+        font-size: 1.5rem;
+    }
+    
+
+    .menu-column.unlimited img {
+        width: 60px;
+        
+    }
+
+    .menu-column.social .social-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-column.social .social-icons i {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ========== Scrollable News Section for mobile view ========== */
+@media (max-width:400px) {
+    .scrolling-news-section {
+    background: rgb(18, 9, 9); 
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.scrolling-news-section h2 {
     font-size: 1.5rem;
-  }
-
-  .scrolling-news-section h2 {
-    font-size: 2rem;
-  }
-
-  .menu-column a,
-  .menu-column p {
-    font-size: 1.5rem;
-  }
-
-  .menu-column.unlimited img {
-    width: 100px;
-  }
-
-  .menu-column.social .social-icons i {
-    font-size: 2rem;
-    gap: 20px;
-  }
-
-  #news, #movies, #comics, #character, #games, #search {
-    font-size: 1rem;
-    top: auto;
-    bottom: 30px;
-    position: relative;
-    display: block;
+    margin-bottom:2px;
     text-align: center;
-    margin: 10px auto;
-  }
+    color:  #a69fa0;
+}
 
-  #play-audio-btn {
-    font-size: 2rem;
-    padding: 10px 20px;
-    left: 50%;
-    top: auto;
-    transform: translate(-50%, 0);
-    position: relative;
-    margin: 10px auto;
-  }
+.scrolling-news-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10%; 
+    scroll-snap-type: x mandatory;
+    padding: 13px;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
 
-  #ban {
-    width: 100vw;
-    height: 120px;
-  }
+.news-card {
+    flex: 0 0 auto;
+    width: 200px; /* ✅ consistent width */
+    background: #232323 ;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(244, 239, 239, 0.1) ;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
 
-  #back {
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
     height: auto;
-  }
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
-  .scrolling-news-container {
-    padding: 20px;
-    gap: 20px;
-  }
+.news-card p {
+    font-size: 1.0rem;
+    color: #fff;
+}
 
-  footer {
-    padding: 30px 20px;
-  }
-
-  .menu-columns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu-column {
-    margin: 10px 0;
-    text-align: center;
-  }
+    
 }
 
