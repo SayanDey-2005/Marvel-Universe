@@ -19,18 +19,35 @@ body {
     padding-top: 50px;
     
 }
+@media (max-width: 400px) {
+    body {
+        width: 100vw; 
+        min-height: 100vw; 
+        position: relative;
+        overflow-y: auto; 
+        padding-top: 4px;
+        
+    }
+}
 
 /* Heading Image */
 #head {
     position: relative; /* or static */
     top: 0vw;
     width: 100vw; /* Full width */
-    height: 48vw; 
+    height: 45vw; 
     z-index: 42;
     display: block;
     margin: 0  px;
     text-align: center;
     
+}
+@media (max-width: 400px) {
+    #head {
+       height: auto;
+       max-height: 60vh;  
+        
+    }
 }
 
 /* Background Image */
@@ -44,18 +61,16 @@ body {
     z-index: -1; 
    
 }
-/* banner */
-/* Banner Video */
-#ban {
-    position: fixed;
-    top: 0px; /* Sticks to the top */
-    left: 0;
-    width: 90vw; /* Full width */
-    height: 180px; /* Same height as before */
-    object-fit: cover; /* Makes sure video covers the area */
-    z-index: 1; /* Behind heading but above background */
-    pointer-events: none;
-     /* Prevents user interaction */
+
+@media (max-width: 400px) {
+#back {
+    position: relative;   /* remove absolute positioning */
+    top: 0;
+    width: 100%;
+    height: auto;   /* adjust height automatically */
+    object-fit: cover; 
+       
+    }
 }
 /* movies hyperlink*/
 #movies {
@@ -153,7 +168,7 @@ body {
 @media (max-width: 400px) {
     #play-audio-btn {
         position: absolute;
-        top: 23%;
+        top: 80%;
         left: 6%;
         font-size: 2rem;
         padding: 0px ;
@@ -295,6 +310,14 @@ header {
     font-family: 'Montserrat', sans-serif;
     
 }
+@media (max-width: 400px) {
+header {
+    height: auto;   /* Let content decide height */
+    min-height: 20vh;  /* ensures it still looks tall */
+    width: 100vw;   /* Full width */
+    overflow: hidden;
+  }
+}
 /* ========== Scrollable News Section ========== */
 .scrolling-news-section {
     background: rgb(252, 251, 251); 
@@ -419,7 +442,7 @@ footer {
 /* ========== Scrollable News Section for mobile view ========== */
 @media (max-width:400px) {
     .scrolling-news-section {
-    background: rgb(18, 9, 9); 
+    background: rgb(253, 251, 251); 
     padding: 40px 20px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -429,7 +452,7 @@ footer {
     font-size: 1.5rem;
     margin-bottom:2px;
     text-align: center;
-    color:  #a69fa0;
+    color:  #140d0e;
 }
 
 .scrolling-news-container {
