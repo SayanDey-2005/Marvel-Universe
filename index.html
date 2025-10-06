@@ -11,20 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="Backgroundaudio.js"></script>
-
-    
-
+    <script src="menu.js"></script>
+    <script src="Search.js"></script>
 </head>
+
 <body>
 <header>
     <img src="mar.jpg" alt="HEADING" id="head">
-    <!-- <img src="marvel.jpg" alt="marvel" id="back"> -->
-     
 
     <audio id="bg-audio" src="marvel_intro.mp3" preload="auto" style="display: none;"></audio>
 
-
-
+    <!-- Desktop Nav -->
     <div class="nav-links">
         <a href="https://en.wikipedia.org/wiki/List_of_Marvel_Cinematic_Universe_films" id="movies"><b>MOVIES</b></a>
         <a href="https://en.wikipedia.org/wiki/Marvel_Comics" id="comics"><b>COMICS</b></a>
@@ -32,9 +29,24 @@
         <a href="https://en.wikipedia.org/wiki/Marvel_Games" id="games"><b>GAMES</b></a>
     </div>
 
+    <!-- Hamburger Icon (mobile only) -->
+<div class="hamburger" id="hamburger">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<!-- Overlay Background -->
+<div class="overlay" id="overlay"></div>
+
+
     <button id="play-audio-btn"><i class="fa-regular fa-circle-play"></i></button>
-    <i class="fa-solid fa-magnifying-glass" id="search"></i>
-    </header>
+    
+    <div class="container">
+     <input type="text" placeholder="Search...">
+    <div class="search"></div>
+    </div>
+
+</header>
+
     <section class="scrolling-news-section">
   <h2>Latest Marvel News</h2>
   <hr class="news-line">
@@ -63,11 +75,8 @@
       <a href="https://www.youtube.com/watch?v=QOdF1zK4ZkY" target="_blank"><img src="Brand.jpg" alt="News 6"></a>
       <p>Spider Brand New Day suit reveal</p> 
     </div>
-       
 </section>
-
     <footer>
-
 <div class="marvel-menu">
   <div class="menu-columns">
     <div class="menu-column">
