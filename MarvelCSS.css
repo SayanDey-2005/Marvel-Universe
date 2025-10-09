@@ -321,6 +321,19 @@ body {
   display: none; /* hide scrollbar for Chrome */
 }
 }
+@media (max-width: 400px) {
+.container {    
+  position: absolute;
+  margin: auto;
+  top: -300px;
+  left: -20px;
+  right: 0px;
+  bottom: 1px;
+  width: 80px;
+  height: 10px;
+}
+
+}
 
 /* Marvel Footer */
 .marvel-menu {
@@ -480,7 +493,7 @@ header {
 .news-card {
     flex: 0 0 auto;
     width: 980px; /* ✅ consistent width */
-    background: #0f0c0cdc ;
+    background: #fcfafadc ;
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(244, 239, 239, 0.1) ;
@@ -496,14 +509,72 @@ header {
 
 .news-card img {
     width: 100%;
-    height: auto;
+    height: 90%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .news-card p {
     font-size: 3.6rem;
-    color: #f2e9e9;
+    font-weight: 600;
+    color: #030303;
+}
+
+/* ========== Scrollable News Section for mobile view ========== */
+@media (max-width:400px) {
+    .scrolling-news-section {
+    background: rgb(253, 251, 251); 
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.scrolling-news-section h2 {
+    font-size: 1.5rem;
+    margin-bottom:2px;
+    text-align: center;
+    color:  #140d0e;
+}
+
+.scrolling-news-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10%; 
+    scroll-snap-type: x mandatory;
+    padding: 13px;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.news-card {
+    flex: 0 0 auto;
+    width: 200px; /* ✅ consistent width */
+    background:#fdfcfcdc ;
+    border-radius: 6px;
+    padding: 1px;
+    box-shadow: 0 0 10px rgba(244, 239, 239, 0.1) ;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news-card p {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: #030303;
+}   
 }
 
 /* Footer Styling */
@@ -550,151 +621,13 @@ footer {
 
     .menu-column.social .social-icons {
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
     }
 
     .menu-column.social .social-icons i {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 }
 
 
-/* ========== Scrollable News Section for mobile view ========== */
-@media (max-width:400px) {
-    .scrolling-news-section {
-    background: rgb(253, 251, 251); 
-    padding: 40px 20px;
-    font-family: 'Montserrat', sans-serif;
-}
 
-
-.scrolling-news-section h2 {
-    font-size: 1.5rem;
-    margin-bottom:2px;
-    text-align: center;
-    color:  #140d0e;
-}
-
-.scrolling-news-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 10%; 
-    scroll-snap-type: x mandatory;
-    padding: 13px;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-}
-
-.news-card {
-    flex: 0 0 auto;
-    width: 200px; /* ✅ consistent width */
-    background:#0e0e0edc ;
-    border-radius: 6px;
-    padding: 5px;
-    box-shadow: 0 0 10px rgba(244, 239, 239, 0.1) ;
-    scroll-snap-align: start;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-
-.news-card:hover {
-    transform: scale(1.05);
-}
-
-.news-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.news-card p {
-    font-size: 1.0rem;
-    color: #fff;
-}
-
-    
-}
-/* ===== Side Menu Styles (Mobile only) ===== */
-.hamburger {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  /* Hide normal nav on mobile */
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 1.7rem;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    position: absolute;
-    top: 2px;
-    left: 0px;
-    z-index: 1100;
-  }
-
-  .side-menu {
-    position: fixed;
-    top: 0;
-    left: -280px; /* hidden by default */
-    width: 280px;
-    height: 100%;
-    background: rgba(10, 10, 10, 0.95);
-    color: white;
-    transition: left 0.3s ease;
-    z-index: 1201;
-    padding-top: 60px;
-  }
-
-  .side-menu.active {
-    left: 0;
-  }
-
-  .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  .menu-content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .menu-content a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin: 15px 0;
-    transition: color 0.3s;
-  }
-
-  .menu-content a:hover {
-    color: crimson;
-  }
-
-  /* Overlay background */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    z-index: 1200;
-  }
-
-  .overlay.active {
-    display: block;
-  }
-}
