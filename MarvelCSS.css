@@ -150,7 +150,7 @@ body {
 #play-audio-btn {
     position: absolute;
     top: 78%;
-    left: 6%;
+    left: 7%;
     transform: translate(-50%, -50%);
     background: transparent; /* remove red */
     color: rgb(250, 247, 247);
@@ -182,7 +182,7 @@ body {
   position: absolute;
   margin: auto;
   top: -2200px;
-  left: -5400px;
+  left: -5500px;
   right: 0px;
   bottom: 1px;
   width: 300px;
@@ -195,8 +195,8 @@ body {
     right: 0px;
     bottom: 10px;
     left: 0px;
-    width: 300px;
-    height: 300px;
+    width: 0px;
+    height: 0px;
     background: rgba(220, 20, 60, 0.654);
     border-radius: 80%;
     transition: all 1s;
@@ -210,12 +210,12 @@ body {
       content: "";
       position: absolute;
       margin: auto;
-      top: 188px;
-      right: 30px;
-      bottom: 40px;
-      left: 155px;
-      width: 55px;
-      height: 4px;
+      top: 120px;
+      right: 0px;
+      bottom: 0px;
+      left: 145px;
+      width: 78px;
+      height: 6px;
       background: white;
       transform: rotate(45deg);
       transition: all .5s;
@@ -228,8 +228,8 @@ body {
       right: 0;
       bottom: 0;
       left: -10px;
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 9px solid white;
       transition: all .5s;
