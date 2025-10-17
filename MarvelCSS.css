@@ -445,9 +445,9 @@ header {
 }
 @media (max-width: 400px) {
 header {
-    height: auto;   /* Let content decide height */
-    min-height: 20vh;  /* ensures it still looks tall */
-    width: 100vw;   /* Full width */
+    height: auto;   
+    min-height: 20vh;  
+    width: 100vw;   
     overflow: hidden;
   }
 }
@@ -496,7 +496,7 @@ header {
     background: #fcfafadc ;
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(244, 239, 239, 0.1) ;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.);
     scroll-snap-align: start;
     transition: transform 0.3s ease;
     text-align: center;
