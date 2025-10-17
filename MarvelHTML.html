@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="Backgroundaudio.js"></script>
-    <script src="menu.js"></script>
+    <script src="Search.js"></script>
 </head>
+
 <body>
 <header>
     <img src="mar.jpg" alt="HEADING" id="head">
@@ -28,30 +29,23 @@
     </div>
 
     <!-- Hamburger Icon (mobile only) -->
-<div class="hamburger" id="hamburger">
-  <i class="fa-solid fa-bars"></i>
-</div>
 
-<!-- Side Menu -->
-<div class="side-menu" id="sideMenu">
-  <div class="close-btn" id="closeBtn">&times;</div>
-  <div class="menu-content">
-    <a href="https://en.wikipedia.org/wiki/List_of_Marvel_Cinematic_Universe_films">MOVIES</a>
-    <a href="https://en.wikipedia.org/wiki/Marvel_Comics">COMICS</a>
-    <a href="https://en.wikipedia.org/wiki/Lists_of_Marvel_Comics_characters">CHARACTERS</a>
-    <a href="https://en.wikipedia.org/wiki/Marvel_Games">GAMES</a>
-    <a href="#">SEARCH</a>
-  </div>
-</div>
 
 <!-- Overlay Background -->
 <div class="overlay" id="overlay"></div>
 
 
     <button id="play-audio-btn"><i class="fa-regular fa-circle-play"></i></button>
-    <i class="fa-solid fa-magnifying-glass" id="search"></i>
-</header>
+    <!-- Search bar -->
+  
+    <div class="container">
+     <input type="text" placeholder="Search...">
+    <div class="search"></div>
 
+    </div>
+</header>
+    <!-- Latest news marvel -->
+  
     <section class="scrolling-news-section">
   <h2>Latest Marvel News</h2>
   <hr class="news-line">
@@ -80,11 +74,8 @@
       <a href="https://www.youtube.com/watch?v=QOdF1zK4ZkY" target="_blank"><img src="Brand.jpg" alt="News 6"></a>
       <p>Spider Brand New Day suit reveal</p> 
     </div>
-       
 </section>
-
     <footer>
-
 <div class="marvel-menu">
   <div class="menu-columns">
     <div class="menu-column">
@@ -109,12 +100,11 @@
 </strong></p>
     <hr class="custom-line">
       <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-x-twitter"></i>
-        <i class="fab fa-instagram"></i> 
-        <i class="fab fa-youtube"></i>
-        <i class="fab fa-pinterest-p"></i>
-        <i class="fab fa-twitch"></i>
+        <a href="https://www.facebook.com/marvelstudios/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/Marvel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/marvel/"><i class="fab fa-instagram"></i></a> 
+        <a href="https://www.youtube.com/marvel"><i class="fab fa-youtube"></i></a>
+        <a href="https://in.pinterest.com/marvel/"><i class="fab fa-pinterest-p"></i></a>
       </div>  
     </div>
   </div>
